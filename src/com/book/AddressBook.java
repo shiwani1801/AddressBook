@@ -1,54 +1,99 @@
 package com.book;
 import java.util.Iterator;
 import java.util.List;
-    public class AddressBook {
-        //Declaring variables for Address Book System
-        private String firstName;
-        private String lastName;
-        private String address;
-        private String city;
-        private String state;
-        private String zip;
-        private String phoneNumber;
-        private String email;
 
-        //Declaring a parameterized constructor by means of which we can set up the values for instance variables above.
-        public AddressBook(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.address = address;
-            this.city = city;
-            this.state = state;
-            this.zip = zip;
-            this.phoneNumber = phoneNumber;
-            this.email = email;
-        }
+public class AddressBook {
+    //Declaring variables for Address Book System
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String city;
+    private String state;
+    private String zip;
+    private String phoneNumber;
+    private String email;
 
-        //Creating toString methods to grab the values.
+    //Creating one default constructor
+    public AddressBook() {
+    }
 
-        @Override
-        public String toString() {
-            return "AddressBook{" +
-                    "firstName='" + firstName + '\'' +
-                    ", lastName='" + lastName + '\'' +
-                    ", address='" + address + '\'' +
-                    ", city='" + city + '\'' +
-                    ", state='" + state + '\'' +
-                    ", zip='" + zip + '\'' +
-                    ", phoneNumber='" + phoneNumber + '\'' +
-                    ", email='" + email + '\'' +
-                    '}';
-        }//Printing contactDetails
+    //Creating one parameterized constructor
+    public AddressBook(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAddress(address);
+        setCity(city);
+        setState(state);
+        setZip(zip);
+        setPhoneNumber(phoneNumber);
+        setEmail(email);
+    }
 
-        public void printContact(
-                List<String> list) {
+    //Create setter methods for all instance variables.
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    //Creating getter method for first name.
+    public String getFirstName() {
+        return firstName;
+    }
+
+    //Grab to a toString method
+    @Override
+    public String toString() {
+        return "ContactPerson{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    //Printing contactDetails
+    public void printContact(List<AddressBook> list) {
+        if(!list.isEmpty())
+        {
             System.out.println("Contact details are below.....\n");
-            if (!list.isEmpty()) {
-                Iterator it = list.iterator();
-                while (it.hasNext()) {
-                    System.out.println(it.next());
-                }
+            Iterator it = list.iterator();
+            while (it.hasNext())
+            {
+                System.out.println(it.next());
             }
         }
-
+        else
+            System.out.println("Contact list is empty.");
     }
+}
