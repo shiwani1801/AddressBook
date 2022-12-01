@@ -34,12 +34,12 @@ public class ContactOperations {
     }
     public void sharedContactCards()
     {
-        AddressBook a = new AddressBook("Soumya", "Singh", "Jobra", "Cuttack",
-                "Odisha", "753007", "8908641811", "soumyars675@gmail.com");
-        AddressBook b = new AddressBook("Sambit", "Behera", "Chowdwar", "Cuttack",
-                "Odisha", "754021", "7008565646", "sbehera@gmail.com");
-        AddressBook c = new AddressBook("Nigam", "Jena", "Nakhara", "Bbsr",
-                "Odisha", "724001", "9937585846", "njena50@gmail.com");
+        AddressBook a = new AddressBook("Shiwani", "Paunikar", "Jogithana", "Umred",
+                "MH", "441203", "9800641811", "shiwani@gmail.com");
+        AddressBook b = new AddressBook("Prati", "Mehera", "NirmalNagari", "Nagpur",
+                "MH", "447678", "7008565696", "prat@gmail.com");
+        AddressBook c = new AddressBook("Ravi", "Jena", "Nakhara", "Nashik",
+                "MH", "468891", "9937554876", "ravi@gmail.com");
         contactDetails.add(a);
         contactDetails.add(b);
         contactDetails.add(c);
