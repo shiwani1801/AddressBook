@@ -13,12 +13,8 @@ public class AddressBook {
     private String phoneNumber;
     private String email;
 
-    //Creating one default constructor
-    public AddressBook() {
-    }
-
     //Creating one parameterized constructor
-    public AddressBook(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
+    public AddressBook (String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setAddress(address);
@@ -80,20 +76,5 @@ public class AddressBook {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 '}';
-    }
-
-    //Printing contactDetails
-    public void printContact(List<AddressBook> list) {
-        if(!list.isEmpty())
-        {
-            System.out.println("Contact details are below.....\n");
-            Iterator it = list.iterator();
-            while (it.hasNext())
-            {
-                System.out.println(it.next());
-            }
-        }
-        else
-            System.out.println("Contact list is empty.");
     }
 }
