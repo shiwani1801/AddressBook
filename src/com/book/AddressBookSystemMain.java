@@ -26,8 +26,8 @@ public class AddressBookSystemMain {
 
             System.out.println("1.Add Contact");
             System.out.println("2.Edit Contact");
-            System.out.println("3.Exit");
-            System.out.println("Enter Choice: ");
+            System.out.println("3.delete contact");
+            System.out.println("4.exist ");
 
             int option = scan.nextInt();
 
